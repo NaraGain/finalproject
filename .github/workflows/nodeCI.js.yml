@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [16.x,17.0, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -34,4 +34,5 @@ jobs:
       working-directory: ./api
     - name: Run tests
       run: npm test
+      working-directory: ./api
    
