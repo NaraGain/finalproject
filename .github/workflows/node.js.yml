@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{matrix.os}}
     defaults:
             run: 
-              working-directory: ./api/
+              working-directory: ./finalproject/api/
  
  
     strategy:
