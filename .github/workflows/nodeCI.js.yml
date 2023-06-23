@@ -34,4 +34,4 @@ jobs:
       working-directory: ./api
     - name: Run tests
       run: npm test
-      working-directory: ./api
+   
