@@ -28,10 +28,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: npm ci
-      working-directory:[" ./api" , "./font-end"]
+      working-directory:[./api , ./font-end]
     - name: Run build
       run: npm run build --if-present
-      working-directory: ["./api" , "./font-end"]
+      working-directory: [./api , ./font-end]
     - name: Run 
       run: npm test
       working-directory: ./api
