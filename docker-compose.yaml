@@ -1,12 +1,12 @@
 version: "3.8"
-service:
+services:
   font:
-      build: ./font-end
-        ports:
-         -30001:3000
+    build: ./font-end
+    ports:
+         - 3001:3000
   backend:
     bulid: ./api
-      ports:
+    ports:
       - 8070:"4000"
     
       
