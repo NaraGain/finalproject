@@ -7,7 +7,7 @@ services:
   backend:
     bulid: ./api
     ports:
-      - 8070:"4000"
+      - 4000:4000
     
       
  
