@@ -2,6 +2,12 @@ pipeline {
     agent any 
     stages {
         stage('Build') { 
+            when {
+                expression {
+                    BRANCH_NAME == "dev" && CODE_CHANGE == true
+                }
+                echo "build success..."
+            }
             steps {
                 // 
             }
@@ -16,9 +22,16 @@ pipeline {
                 // 
             }
         }
-
+// post is use Execute some 
+//logic After all stage executed is done
         post{
-            
+            always{
+
+            }
+
+            success {
+
+            }
         }
     }
 }
