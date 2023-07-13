@@ -30,7 +30,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
       working-directory: ./api
-      run: echo "install dependencies successfully"
+    - name: setup job message
+      run: echo "install sucessfully"
     - name: Run build
       run: npm run build --if-present
       working-directory: ./api
