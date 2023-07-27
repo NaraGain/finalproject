@@ -2,6 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+const [users, setUsers] = useState([])
+
+  const fetchUserData = () => {
+    fetch("https://localhost:4000")
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setUsers(data)
+      })
+  }
+
+  
   return (
     <div className="App">
       <header className="App-header">
