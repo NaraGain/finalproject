@@ -1,6 +1,11 @@
 pipeline {
     agent any 
     stages {
+        git branch : 'main',
+        url  : 'ssh or http url form project'
+    }
+
+    stages {
         stage('Build') { 
             when {
                 expression {
