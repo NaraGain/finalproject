@@ -39,7 +39,9 @@ jobs:
       run: npm test
       working-directory: ./api
     - name: deploy
-      host_api_serice: ${{secrets.app.api.server}}
-      host_project_secrect: ${{secrets.app.project_secrect}}
+      uses: action/checkout@v3
+      with:
+        host_api_serice: ${{secrets.app.api.server}}
+        host_project_secrect: ${{secrets.app.project_secrect}}
    
   
